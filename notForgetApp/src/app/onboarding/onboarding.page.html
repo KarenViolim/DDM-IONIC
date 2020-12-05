@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      NotForgetApp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-slides pager="true">
+    <ion-slide class="ion-padding">
+      <img src="../../assets/img/welcome.svg" size="550px" >
+
+      <div class="slider-text">
+        <h2>Bem vindo(a) ao NotForgetApp!</h2>
+
+        <p>
+          Que bom que você nos encontrou e nos escolheu. 
+          Arrasta para direita que eu já te conto como é fácil nosso app...
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="skip()">PULAR</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">SEGUINTE</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img src="../../assets/img/pixeltrue-plan-1.svg" >
+
+      <div class="slider-text">
+        <h2>Não esqueça mais!</h2>
+
+        <p>
+          Nosso app está aqui para te ajudar a não ser mais esquecido.
+          É bem simples você só precisa: <br>
+          1 - Cria uma pasta para sua anotação <br>
+          2 -  Fazer suas anotações para não esquecer depois <br>
+          <strong>Viu como é fácil? </strong>
+        </p>
+      </div>
+
+      <div class="navigator">
+        <ion-button color="primary" fill="clear" (click)="skip()">PULAR</ion-button>
+        <ion-button color="primary" fill="clear" (click)="next()">SEGUINTE</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide class="ion-padding">
+      <img src="../../assets/img/pixeltrue-vision-1.svg" >
+
+      <div class="slider-text">
+        <h2>Vem nos conhecer melhor!</h2>
+
+        <p>
+          Estamos felizes em poder te ajudar.
+          Junte-se a gente. Vamos Começar?
+        </p>
+      </div>
+
+      <ion-button class="buttonOnBottom"  color="danger" >COMEÇAR AGORA!</ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,40 @@
+ion-slides {
+  height: 100%;
+}
+
+ion-slide {
+  display: block;
+}
+
+ion-slide img {
+  width: 650px;
+  padding-top: 15%;
+}
+
+.slider-text {
+  padding-top: 5%;
+}
+
+.slider-text h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ed576b;
+  font-weight: bold;
+}
+
+p {
+  font-size: medium;
+  color: #b5b8c2;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.buttonOnBottom {
+  margin-top: 8%;
+}
