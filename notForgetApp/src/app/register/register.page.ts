@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { User } from '../core/interfaces/user.interface';
+import { Router } from '@angular/router';
 import { AuthService } from '../core/service/auth.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class RegisterPage {
     private authService: AuthService,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
-    public keyboard: KeyboardEvent
+    private router: Router
   ) { }
 
   async register(): Promise<void> {
@@ -24,6 +25,7 @@ export class RegisterPage {
 
     try {
       await this.authService.register(this.userRegister);
+      this.router.navigate(['/home']);
     } catch (error) {
       this.presentToast(error.message);
     } finally {

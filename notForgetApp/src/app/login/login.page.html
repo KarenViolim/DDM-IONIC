@@ -16,17 +16,17 @@
         <ion-list inset>
           <ion-item>
             <ion-label  position="floating">E-mail</ion-label>
-            <ion-input autofocus required type="email" name="email" [(ngModel)]="email"></ion-input>
+            <ion-input autofocus required type="email" name="email" [(ngModel)]="userLogin.email"></ion-input>
           </ion-item>
         
           <ion-item>
             <ion-label position="floating">Senha</ion-label>
-            <ion-input autofocus required type="password" name="password" [(ngModel)]="password"></ion-input>
+            <ion-input autofocus required type="password" name="password" [(ngModel)]="userLogin.password"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
     </ion-row>
-    <ion-button  full type="submit" color="warning" (click)="login()"s> Entrar </ion-button>
+    <ion-button  full type="submit" color="warning" (click)="login()"> Entrar </ion-button>
     </form>
 </ion-content>
 
