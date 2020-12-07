@@ -16,7 +16,6 @@ export class LoginPage {
     private authService: AuthService,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
-    public keyboard: KeyboardEvent
     ) { }
 
     async login(): Promise<void> {
