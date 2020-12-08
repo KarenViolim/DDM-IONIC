@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { Post } from '../core/interfaces/post.interface';
 import { Router } from '@angular/router';
@@ -10,8 +10,9 @@ import { AuthService } from '../core/service/auth.service';
   templateUrl: './post.page.html',
   styleUrls: ['./post.page.scss'],
 })
-export class PostPage {
+export class PostPage implements OnInit {
   public post: Post = {};
+  public key: string = '';
   private loading: any;
 
   constructor(
@@ -22,18 +23,33 @@ export class PostPage {
     private router: Router
   ) { }
 
+  ngOnInit() {
+    this.post = {};
+    this.postService.currentPost.subscribe(data => {
+      if (data.post && data.key) {
+        this.post.categoria = data.post.categoria;
+        this.post.descricao = data.post.descricao;
+        this.key = data.key;
+      }
+    })
+  }
+
   async register(): Promise<void> {
     await this.presentLoading();
     try {
-      const user = this.authService.getCurrentUser();
-      console.log(user);
-      this.post.user_id = '1';
-      this.post.data_criacao = new Date();
-      await this.postService.insert(this.post);
+      if (this.key) {
+        this.postService.update(this.post, this.key);
+        this.key = '';
+      } else {
+        this.post.user_id = '1';
+        this.post.data_criacao = new Date();
+        await this.postService.insert(this.post);
+      }
     } catch (error) {
       this.presentToast(error.message);
     } finally {
       this.loading.dismiss();
+      this.post = {};
     }
   }
 

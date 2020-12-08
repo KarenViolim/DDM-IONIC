@@ -23,10 +23,5 @@ export class AuthService {
   getAuth() {
     return this.afa;
   }
-
-  getCurrentUser() { 
-    this.afa.authState.subscribe((user: firebase.User) => {
-      return user;
-    });
-  }
+  
 }
