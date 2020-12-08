@@ -9,13 +9,26 @@ ion-button {
   margin-left: 40%;
 }
 
+.login{
+  font-size: 30px;
+  color: #7964e0;
+}
+ 
+.btn{
+  background-color: #7964e0 !important;
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+}
+
 h3 {
   margin-left: 40px;
   justify-content: center;
 }
 
 .link {
-  color: #ffca22;
+  color:#7964e0;
   font-weight: 500;
   text-decoration: none;
 }

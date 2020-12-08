@@ -1,12 +1,12 @@
-<ion-content  >
+<ion-content>
   <ion-row class="logo-row">
     <ion-col></ion-col>
     <ion-col width-80>
-      <ion-avatar> 
-        <img src="../../assets/img/abstract-845.png"/>
-        <h3 class="text-center">Login</h3>
+      <ion-avatar>
+        <img src="../../assets/img/login2.png" />
+        <h3 class="text-center login">Login</h3>
       </ion-avatar>
-     
+
     </ion-col>
     <ion-col></ion-col>
   </ion-row>
@@ -15,10 +15,10 @@
       <ion-col>
         <ion-list inset>
           <ion-item>
-            <ion-label  position="floating">E-mail</ion-label>
+            <ion-label position="floating">E-mail</ion-label>
             <ion-input autofocus required type="email" name="email" [(ngModel)]="userLogin.email"></ion-input>
           </ion-item>
-        
+
           <ion-item>
             <ion-label position="floating">Senha</ion-label>
             <ion-input autofocus required type="password" name="password" [(ngModel)]="userLogin.password"></ion-input>
@@ -26,12 +26,14 @@
         </ion-list>
       </ion-col>
     </ion-row>
-    <ion-button  full type="submit" color="warning" (click)="login()"> Entrar </ion-button>
-    </form>
+    <ion-button full type="submit" color="#7964e0" (click)="login()" class="btn">
+      Entrar
+    </ion-button>
+  </form>
 </ion-content>
 
 <ion-footer class="ion-no-border">
-	<ion-toolbar>
-		<p class="ion-text-center custom-font">Ainda não tem uma conta? <a class="link" href="register">Registrar-se</a></p>
-	</ion-toolbar>
+  <ion-toolbar>
+    <p class="ion-text-center custom-font">Ainda não tem uma conta? <a class="link" href="register">Registrar-se</a></p>
+  </ion-toolbar>
 </ion-footer>

@@ -13,9 +13,9 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-button fill="clear" (click)="navigateToPost()">Adicionar novo Post It</ion-button>
+  <ion-button fill="clear" class="labels" (click)="navigateToPost()">Adicionar novo Post It</ion-button>
   <div *ngFor="let post of posts | async">
-    <ion-card>
+    <ion-card class="card">
       <ion-card-header>
         <ion-button icon-only shape="round" color="white" fill="clear" (click)="delete(post.key)">
           <ion-icon slot="icon-only" name="close"></ion-icon>

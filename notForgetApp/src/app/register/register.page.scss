@@ -2,20 +2,36 @@ ion-avatar {
   margin: 15px;
   width: 150px;
   height: auto;
+  align-items: center;
 }
 
 ion-button {
+  background-color: #7964e0;
   margin-top: 8px;
   margin-left: 35%;
 }
 
+.login{
+  font-size: 30px;
+  color: #7964e0;
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+}
+
 h3 {
-  margin-left: 30px;
+  align-items: center;
   justify-content: center;
 }
 
+.text{
+  color:#7964e0;
+  font-weight: bold;
+}
+
 .link {
-  color: #50c8ff;
+  color: #7964e0;
   font-weight: 500;
   text-decoration: none;
 }

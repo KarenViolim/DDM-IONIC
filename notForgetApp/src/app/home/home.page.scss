@@ -25,3 +25,20 @@
 #container a {
   text-decoration: none;
 }
+
+ion-content {
+  --ion-background-color: linear-gradient(180deg, rgba(146,125,255,1) 0%, rgba(9,9,121,1) 87%);
+}
+
+.labels {
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.card {
+  --ion-background-color: white;
+  border-radius: 20px;
+  align-items: center;
+}
