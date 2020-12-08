@@ -30,6 +30,14 @@ ion-content {
   --ion-background-color: linear-gradient(180deg, rgba(146,125,255,1) 0%, rgba(9,9,121,1) 87%);
 }
 
+ion-card-content {
+  width: 230px;
+}
+
+ion-icon{
+  text-align: left;
+}
+
 .labels {
   color: white;
   font-size: 18px;
@@ -41,4 +49,8 @@ ion-content {
   --ion-background-color: white;
   border-radius: 20px;
   align-items: center;
+}
+
+.icon1{
+  align-items: flex-end;
 }
