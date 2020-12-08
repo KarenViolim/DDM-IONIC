@@ -34,7 +34,7 @@ export class PostService {
   }
 
   delete(key: string) {
-    this.db.object(`post/${key}`).remove
+    this.db.object(`post/${key}`).remove()
   }
 
   changePost(post: Post, key: string) {

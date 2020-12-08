@@ -14,7 +14,7 @@
         <ion-col>
           <ion-list inset>
             <ion-item>
-              <ion-label  position="floating">Nome</ion-label>
+              <ion-label  position="floating">Categoria</ion-label>
               <ion-select name="categoria" [(ngModel)]="post.categoria">
                 <ion-select-option value="Trabalho">Trabalho</ion-select-option>
                 <ion-select-option value="Escola">Escola</ion-select-option>
@@ -24,7 +24,7 @@
             </ion-item>
             <ion-item>
               <ion-label  position="floating">Descrição</ion-label>
-              <ion-input autofocus required  ngModel type="text" name="descricao" [(ngModel)]="post.descricao" ></ion-input>
+              <ion-textarea autofocus required  ngModel type="text" name="descricao" [(ngModel)]="post.descricao" ></ion-textarea>
             </ion-item>
             
           </ion-list>

@@ -41,10 +41,16 @@ export class PostPage implements OnInit {
         this.postService.update(this.post, this.key);
         this.key = '';
       } else {
-        this.post.user_id = '1';
+        this.authService.getAuth().onAuthStateChanged(user => {
+          this.post.user_id = user.uid;
+        });
         this.post.data_criacao = new Date();
+        if (!this.post.categoria) {
+          this.post.categoria = 'Trabalho'
+        }
         await this.postService.insert(this.post);
       }
+      this.router.navigate(['/home']);
     } catch (error) {
       this.presentToast(error.message);
     } finally {

@@ -25,7 +25,7 @@ export class RegisterPage {
 
     try {
       await this.authService.register(this.userRegister);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     } catch (error) {
       this.presentToast(error.message);
     } finally {

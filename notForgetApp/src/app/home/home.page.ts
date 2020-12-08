@@ -16,11 +16,11 @@ export class HomePage implements OnInit{
   constructor(
     private postService: PostService,
     private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit() {
     this.posts = this.postService.getAll();
-    console.log(this.posts)
   }
 
   delete(key: string) {
@@ -28,6 +28,10 @@ export class HomePage implements OnInit{
   }
 
   edit(post: Post, key: string) {
+    this.router.navigate(['/post']);
     this.postService.changePost(post, key);
+  }
+  navigateToPost() {
+    this.router.navigate(['/post']);
   }
 }
